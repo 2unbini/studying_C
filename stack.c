@@ -13,13 +13,13 @@ Stack *createStack(int capacity)
     Stack *stack = (Stack *)malloc(sizeof(Stack));
     stack->capacity = capacity;
     stack->top = -1;
-    stack->arr = (int *)malloc(stack->capacity * sizeof(int)); //이건 뭘까
+    stack->arr = (int *)malloc(stack->capacity * sizeof(int));
     return stack;
 }
 
 int isFull(Stack *stack)
 {
-    return stack->top == stack->capacity - 1; //왜 -1을 하는 걸까
+    return stack->top == stack->capacity - 1; // 배열은 0부터 시작하니까 마지막은 capacity-1
 }
 
 int isEmpty(Stack *stack)
